@@ -1,4 +1,23 @@
+@font-face {
+    font-family: "Thunder";
+    src:
+        url("../fonts/Thunder-BoldLC.woff2") format("woff2"),
+        url("../fonts/Thunder-BoldLC.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 @import "tailwindcss";
 
+@theme {
+    --font-thunder: "Thunder";
+}
 
+.hero-gradient {
+    background: linear-gradient(
+        180deg,
+        rgba(134, 54, 204, 0) 31.73%,
+        #8636cc 100%
+    );
+}
