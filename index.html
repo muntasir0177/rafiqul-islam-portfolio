@@ -8,86 +8,89 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 
 <body>
 
-    <div class="px-4 py-6">
-        <nav id="navbar"
-            class="fixed top-0 left-0 right-0 z-50 flex items-center flex items-center justify-between p-4 md:px-45 md:py-4 bg-[#8636CC]">
-            <div class="container mx-auto px-6 md:px-0 flex items-center justify-between">
-                <a href="index.html" class="flex items-center gap-3 shrink-0 group">
-                    <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20">
-                        <img src="assets/images/nav-img.png" alt="Rafiqul Islam" class="w-full h-full object-cover" />
-                    </div>
-                    <span class="text-[18px] font-semibold text-white font-['Inter_Display',sans-serif]">
-                        Rafiqul Islam
-                    </span>
-                </a>
 
-                <div class="flex items-center gap-10">
-                    <ul class="hidden md:flex items-center gap-10 list-none">
-                        <li>
-                            <a href="work.html"
-                                class="text-[14px] font-medium text-white/90 hover:text-white uppercase tracking-widest font-['Inter_Display',sans-serif] transition-all">
-                                Work
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about.html"
-                                class="text-[14px] font-medium text-white/90 hover:text-white uppercase tracking-widest font-['Inter_Display',sans-serif] transition-all">
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="text-[14px] font-medium text-white/90 hover:text-white uppercase tracking-widest font-['Inter_Display',sans-serif] transition-all">
-                                Download CV
-                            </a>
-                        </li>
-                    </ul>
-
-                    <button id="hamburger"
-                        class="md:hidden flex flex-col justify-center items-center gap-[5px] w-8 h-8 focus:outline-none">
-                        <span id="ham1" class="block w-6 h-[2px] bg-white transition-all duration-300"></span>
-                        <span id="ham2" class="block w-6 h-[2px] bg-white transition-all duration-300"></span>
-                        <span id="ham3" class="block w-4 h-[2px] bg-white transition-all duration-300 ml-auto"></span>
-                    </button>
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 flex items-center flex items-center justify-between px-0 md:px-45 py-4 bg-[#8636CC]">
+        <div class="container mx-auto px-6 md:px-0 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+                <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20">
+                    <img src="assets/images/nav-img.png" alt="Rafiqul Islam" class="w-full h-full object-cover" />
                 </div>
-            </div>
-        </nav>
+                <span class="text-[18px] font-semibold text-white font-['Inter_Display',sans-serif]">
+                    Rafiqul Islam
+                </span>
+            </a>
 
-        <div id="mobile-menu"
-            class="hidden flex-col gap-6 p-8 bg-[#8636CC] md:hidden z-40 fixed top-[72px] left-0 right-0 h-screen">
-            <a href="work.html"
-                class="text-white uppercase tracking-widest text-lg font-medium border-b border-white/10 pb-4">Work</a>
-            <a href="about.html"
-                class="text-white uppercase tracking-widest text-lg font-medium border-b border-white/10 pb-4">About</a>
-            <a href="#" class="text-white uppercase tracking-widest text-lg font-medium">Download CV</a>
+            <div class="flex items-center gap-10">
+                <ul class="hidden md:flex items-center gap-10 list-none">
+                    <li>
+                        <a href="work.html"
+                            class="text-[14px] font-medium text-white/90 hover:text-white uppercase tracking-widest font-['Inter_Display',sans-serif] transition-all">
+                            Work
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html"
+                            class="text-[14px] font-medium text-white/90 hover:text-white uppercase tracking-widest font-['Inter_Display',sans-serif] transition-all">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-[14px] font-medium text-white/90 hover:text-white uppercase tracking-widest font-['Inter_Display',sans-serif] transition-all">
+                            Download CV
+                        </a>
+                    </li>
+                </ul>
+
+                <button id="hamburger"
+                    class="md:hidden flex flex-col justify-center items-center gap-[5px] w-8 h-8 focus:outline-none">
+                    <span id="ham1" class="block w-6 h-[2px] bg-white transition-all duration-300"></span>
+                    <span id="ham2" class="block w-6 h-[2px] bg-white transition-all duration-300"></span>
+                    <span id="ham3" class="block w-4 h-[2px] bg-white transition-all duration-300 ml-auto"></span>
+                </button>
+            </div>
         </div>
+    </nav>
+
+    <div id="mobile-menu"
+        class="hidden flex-col gap-6 p-8 bg-[#8636CC] md:hidden z-40 fixed top-[72px] left-0 right-0 h-screen">
+        <a href="work.html"
+            class="text-white uppercase tracking-widest text-lg font-medium border-b border-white/10 pb-4">Work</a>
+        <a href="about.html"
+            class="text-white uppercase tracking-widest text-lg font-medium border-b border-white/10 pb-4">About</a>
+        <a href="#" class="text-white uppercase tracking-widest text-lg font-medium">Download CV</a>
     </div>
+
 
 
     <!-- Hero -->
     <section class="bg-[#8636CC] flex items-center overflow-hidden">
         <div class="container mx-auto min-h-screen flex items-center justify-center p-4 sm:p-8 md:p-0">
-            <div class="grid grid-cols-12 gap-0 items-center flex-grow">
+            <div class="grid grid-cols-12 gap-0 items-center flex-grow pt-16 md:pt-8">
 
                 <div class="col-span-12 lg:col-span-7 z-10 space-y-8">
                     <div class="md:pb-[32px]">
                         <h1
-                            class=" font-thunder text-white text-[90px] md:text-[156px] font-black leading-[0.9] uppercase pb-[32px]">
+                            class="font-thunder-bold text-white text-[90px] md:text-[156px] font-black leading-[0.9] uppercase pb-[32px]">
                             Graphic & <br><span class="text-[#D5A4FF]">Motion</span> Designer
                         </h1>
-                        <p class="text-white/90 text-[24px]">
+                        <p class="font-inter-display text-white/90 text-[24px]">
                             Transforming ideas into stunning visual experiences that captivate, engage, and inspire
                             audiences worldwide.
                         </p>
                     </div>
 
-                    <div class="flex flex-wrap gap-4 pb-[46px]">
+                    <div class="flex flex-wrap gap-4 pb-[40px]">
                         <a href="#"
-                            class="bg-white text-[#8636CC] px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-opacity-90 transition-all">
+                            class="border-2 border-white text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-[#8636CC] transition-all">
                             View My Work
                         </a>
                         <a href="#"
@@ -96,26 +99,34 @@
                         </a>
                     </div>
 
-                    <div class="grid grid-cols-3 gap-8 max-w-3xl">
+                    <div class="grid grid-cols-3 gap-3 md:gap-8 max-w-3xl pb-0 md:pb-[40px]">
                         <div class="flex flex-col">
-                            <span class="text-white text-4xl md:text-5xl font-bold">07+</span>
+                            <span class="font-thunder-bold text-white text-4xl md:text-5xl">
+                                <span class="counter" data-target="7">0</span>+
+                            </span>
                             <span class="text-white/60 text-xs md:text-sm uppercase tracking-widest mt-1">Years
                                 Experience</span>
                         </div>
-                        <div class="flex flex-col border-l border-white/20 pl-8">
-                            <span class="text-white text-4xl md:text-5xl font-bold">50+</span>
+
+                        <div class="flex flex-col border-l border-white/20 pl-6 md:pl-8">
+                            <span class="font-thunder-bold text-white text-4xl md:text-5xl">
+                                <span class="counter" data-target="50">0</span>+
+                            </span>
                             <span class="text-white/60 text-xs md:text-sm uppercase tracking-widest mt-1">Projects
                                 Delivered</span>
                         </div>
+
                         <div class="flex flex-col border-l border-white/20 pl-8">
-                            <span class="text-white text-4xl md:text-5xl font-bold">30+</span>
+                            <span class="font-thunder-bold text-white text-4xl md:text-5xl">
+                                <span class="counter" data-target="30">0</span>+
+                            </span>
                             <span class="text-white/60 text-xs md:text-sm uppercase tracking-widest mt-1">Happy
                                 Clients</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-span-12 lg:col-span-5 flex items-end -mr-43 relative">
+                <div class="col-span-12 lg:col-span-5 mr-0 md:-mr-40 relative">
                     <img src="assets/images/hero-profile.png" alt="Rafiqul Islam"
                         class="w-full aspect-1072/1040 object-cover" />
                     <div class="hero-gradient absolute inset-0 pointer-events-none">
@@ -139,27 +150,27 @@
                     class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-300"
                     id="play-button">
                     <div
-                        class="w-full max-w-[32px] rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-102 transition-transform">
-                        <img class="w-full aspect-32/32" src="assets/images/home-img7.svg" alt="Play Icon">
+                        class="w-full max-w-[32px] rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-102 transition-transform cursor-pointer">
+                        <img class="w-full aspect-35/35" src="assets/images/home-img7.svg" alt="Play Icon">
                     </div>
                 </button>
             </div>
 
             <div class="mb-8 p-4">
                 <h2
-                    class="font-thunder px-25 text-[56px] md:text-[124px] font-black justify-center items-center flex flex-wrap gap-x-4 gap-y-2 leading-[1.2]">
+                    class="font-thunder-bold px-0 md:px-[250px] text-[56px] md:text-[124px] justify-center items-center flex flex-wrap gap-x-3 md:gap-x-4 md:gap-y-2 leading-[1.2]">
                     <span class="text-[#9333EA]">Crafting</span>
                     <span class="text-[#1A1A1A]">Visual</span>
-                    <img src="assets/images/home-img2.png" alt="Icon" class="w-auto rounded-lg">
+                    <img src="assets/images/home-img2.png" alt="Icon" class="w-[40px] md:w-auto rounded-lg">
                     <span class="text-[#1A1A1A]">Stories</span>
-                    <img src="assets/images/home-img3.png" alt="Icon" class="w-auto rounded-lg">
+                    <img src="assets/images/home-img3.png" alt="Icon" class="w-[40px] md:w-auto rounded-lg">
                     <span class="text-[#1A1A1A]">That</span>
                     <span class="text-[#9333EA]">Resonate</span>
                 </h2>
             </div>
 
             <div class="mb-10 justify-center items-center flex flex-wrap">
-                <p class="text-[#350063] text-[18px] md:text-[32px]">
+                <p class="inter-display text-[#350063] text-[18px] md:text-[32px] leading-relaxed">
                     I'm Rafiqul Islam, a passionate graphic and motion designer with over 7 years of experience
                     transforming ideas into compelling visual narratives. Based in Bangladesh, I work with clients
                     worldwide to create designs that not only look beautiful but drive real business results.
@@ -168,11 +179,11 @@
 
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#"
-                    class=" text-center bg-[#9333EA] hover:bg-[#7e22ce] text-white w-full md:w-auto px-8 py-4 rounded-full font-semibold uppercase text-sm tracking-wider transition-all">
+                    class="inter-display-medium text-center bg-[#9333EA] hover:bg-[#7e22ce] text-white w-full md:w-auto px-8 py-4 rounded-full font-semibold uppercase text-sm tracking-wider transition-all">
                     View My Work
                 </a>
                 <a href="#"
-                    class="text-center border-2 border-[#9333EA] text-[#9333EA] hover:bg-[#9333EA] hover:text-white w-full md:w-auto px-8 py-4 rounded-full font-semibold uppercase text-sm tracking-wider transition-all">
+                    class="inter-display-medium text-center border-2 border-[#9333EA] text-[#9333EA] hover:bg-[#9333EA] hover:text-white w-full md:w-auto px-8 py-4 rounded-full font-semibold uppercase text-sm tracking-wider transition-all">
                     Download Resume
                 </a>
             </div>
@@ -180,14 +191,15 @@
     </section>
 
     <!-- Skills at a Glance -->
-    <section class="bg-white py-10 md:py-20 px-6 md:px-12 lg:px-24">
+    <section class="bg-white py-0 md:py-20 px-6 md:px-12 lg:px-24">
         <div class="container mx-auto">
             <div class="mb-14">
                 <h2
-                    class="text-[#350063] text-[56px] md:text-[96px] font-black uppercase tracking-tight leading-none mb-6">
+                    class="font-thunder-bold text-[#350063] text-[46px] md:text-[86px] font-black uppercase leading-none mb-6">
                     Skills at a Glance
                 </h2>
-                <p class="text-[#350063] max-w-lg text-sm md:text-[16px] leading-relaxed font-medium">
+                <p
+                    class="font-inter-display text-[#350063] max-w-lg text-sm md:text-[16px] leading-relaxed font-medium">
                     Specialized expertise across multiple design disciplines to bring your vision to life with precision
                     and creativity.
                 </p>
@@ -199,8 +211,10 @@
                     <div class="mb-8">
                         <img src="assets/images/home-img1.svg" alt="Brand Identity" class="w-12 h-12 object-contain">
                     </div>
-                    <h3 class="text-[#2D0066] text-2xl font-black uppercase mb-3 tracking-wide">Brand Identity</h3>
-                    <p class="text-gray-500 text-[15px] leading-snug">Logo design, brand guidelines, visual systems</p>
+                    <h3 class="font-thunder-semi-bold text-[#2D0066] text-2xl font-black uppercase mb-3">Brand
+                        Identity</h3>
+                    <p class="font-inter-display text-gray-500 text-[15px] leading-snug">Logo design, brand guidelines,
+                        visual systems</p>
                 </div>
 
                 <div
@@ -208,8 +222,11 @@
                     <div class="mb-8">
                         <img src="assets/images/home-img2.svg" alt="Motion Graphics" class="w-12 h-12 object-contain">
                     </div>
-                    <h3 class="text-[#2D0066] text-2xl font-black uppercase mb-3 tracking-wide">Motion Graphics</h3>
-                    <p class="text-gray-500 text-[15px] leading-snug">Animated logos, kinetic typography, transitions
+                    <h3 class="font-thunder-semi-bold text-[#2D0066] text-2xl font-black uppercase mb-3">Motion
+                        Graphics</h3>
+                    <p class="font-inter-display text-gray-500 text-[15px] leading-snug">Animated logos, kinetic
+                        typography,
+                        transitions
                     </p>
                 </div>
 
@@ -218,8 +235,10 @@
                     <div class="mb-8">
                         <img src="assets/images/home-img3.svg" alt="Social Media" class="w-12 h-12 object-contain">
                     </div>
-                    <h3 class="text-[#2D0066] text-2xl font-black uppercase mb-3 tracking-wide">Social Media Design</h3>
-                    <p class="text-gray-500 text-[15px] leading-snug">Posts, stories, ads, content templates</p>
+                    <h3 class="font-thunder-semi-bold text-[#2D0066] text-2xl font-black uppercase mb-3">Social
+                        Media Design</h3>
+                    <p class="font-inter-display text-gray-500 text-[15px] leading-snug">Posts, stories, ads, content
+                        templates</p>
                 </div>
 
                 <div
@@ -227,8 +246,10 @@
                     <div class="mb-8">
                         <img src="assets/images/home-img4.svg" alt="Packaging" class="w-12 h-12 object-contain">
                     </div>
-                    <h3 class="text-[#2D0066] text-2xl font-black uppercase mb-3 tracking-wide">Packaging</h3>
-                    <p class="text-gray-500 text-[15px] leading-snug">Product packaging, labels, box design</p>
+                    <h3 class="font-thunder-semi-bold text-[#2D0066] text-2xl font-black uppercase mb-3">
+                        Packaging</h3>
+                    <p class="font-inter-display text-gray-500 text-[15px] leading-snug">Product packaging, labels, box
+                        design</p>
                 </div>
 
                 <div
@@ -236,18 +257,25 @@
                     <div class="mb-8">
                         <img src="assets/images/home-img5.svg" alt="Explainer Videos" class="w-12 h-12 object-contain">
                     </div>
-                    <h3 class="text-[#2D0066] text-2xl font-black uppercase mb-3 tracking-wide">Explainer Videos</h3>
-                    <p class="text-gray-500 text-[15px] leading-snug">Animated explainers, product demos</p>
+                    <h3 class="font-thunder-semi-bold text-[#2D0066] text-2xl font-black uppercase mb-3">
+                        Explainer Videos</h3>
+                    <p class="font-inter-display text-gray-500 text-[15px] leading-snug">Animated explainers, product
+                        demos
+                    </p>
                 </div>
 
                 <div
                     class="bg-white border border-gray-100 p-6 md:p-10 rounded-[24px] shadow-[0_15px_50px_-12px_rgba(0,0,0,0.04)] hover:shadow-lg transition-all duration-300 flex flex-col items-start">
-                    <div class="mb-8">
+                    <div class="mb-0 md:mb-8">
                         <img src="assets/images/home-img6.svg" alt="Presentation Design"
                             class="w-12 h-12 object-contain">
                     </div>
-                    <h3 class="text-[#2D0066] text-2xl font-black uppercase mb-3 tracking-wide">Presentation Design</h3>
-                    <p class="text-gray-500 text-[15px] leading-snug">Animated explainers, product demos</p>
+                    <h3 class="font-thunder-semi-bold text-[#2D0066] text-2xl font-black uppercase mb-3">Presentation
+                        Design
+                    </h3>
+                    <p class="font-inter-display text-gray-500 text-[15px] leading-snug">Animated explainers, product
+                        demos
+                    </p>
                 </div>
             </div>
         </div>
@@ -255,22 +283,22 @@
 
 
     <!-- Featured Work -->
-    <section class="bg-[#FCF8FF] py-10 md:py-20 px-6">
+    <section class="bg-[#FCF8FF] py-10 md:py-20 px-4 md:px-6">
         <div class="container mx-auto">
 
             <div class="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-16">
                 <h2
-                    class="text-[#350063] text-[56px] md:text-[96px] font-black uppercase leading-none tracking-tighter pt-0">
+                    class="font-thunder-bold text-[#350063] text-[46px] md:text-[86px] font-black uppercase leading-none pt-0">
                     Featured Work
                 </h2>
 
                 <div class="flex flex-col items-start md:items-end gap-4 max-w-md">
-                    <p class="text-[#350063] text-[16px] font-medium leading-relaxed md:text-right">
+                    <p class="font-inter-display text-[#350063] text-[16px] leading-relaxed md:text-right">
                         A curated selection of my recent projects showcasing diverse design solutions and creative
                         excellence.
                     </p>
                     <a href="#"
-                        class="bg-[#8636CC] hover:bg-[#7e22ce] text-white px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all">
+                        class="font-inter-display-medium bg-[#8636CC] hover:bg-[#7e22ce] text-white px-8 py-3 rounded-full text-[16px] uppercase transition-all">
                         View My Work
                     </a>
                 </div>
@@ -284,7 +312,7 @@
                             class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
                     <h3
-                        class="text-[#1A1A1A] text-[18px] md:text-[32px] font-black uppercase tracking-tight px-[24px] py-[32px]">
+                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
                         Hello Mello — Social Media Campaign
                     </h3>
                 </a>
@@ -295,7 +323,7 @@
                             class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
                     <h3
-                        class="text-[#1A1A1A] text-[18px] md:text-[32px] font-black uppercase tracking-tight px-[24px] py-[32px]">
+                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
                         Nexus Platform
                     </h3>
                 </a>
@@ -306,7 +334,7 @@
                             class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
                     <h3
-                        class="text-[#1A1A1A] text-[18px] md:text-[32px] font-black uppercase tracking-tight px-[24px] py-[32px]">
+                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
                         Cream Tube Label Design
                     </h3>
                 </a>
@@ -317,7 +345,7 @@
                             class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
                     <h3
-                        class="text-[#1A1A1A] text-[18px] md:text-[32px] font-black uppercase tracking-tight px-[24px] py-[32px]">
+                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
                         Premium Craft Beer Can Label Design
                     </h3>
                 </a>
@@ -330,15 +358,14 @@
 
     <!-- My Design Process -->
 
-    <section class="py-20 px-6">
+    <section class="py-10 md:py-20 px-4 md:px-6">
         <div class="container mx-auto">
 
-            <div class="mb-14">
-                <h2
-                    class="text-[#350063] text-[56px] md:text-[96px] font-black uppercase leading-none tracking-tighter mb-4">
+            <div class="pb-8 md:pb-14">
+                <h2 class="font-thunder-bold text-[#350063] text-[46px] md:text-[96px] uppercase pb-4">
                     My Design Process
                 </h2>
-                <p class="text-[#350063] text-[18px] font-normal max-w-xl">
+                <p class="font-inter-display text-[#350063] text-[18px] max-w-xl">
                     A structured approach to delivering exceptional design solutions from concept to completion.
                 </p>
             </div>
@@ -350,8 +377,8 @@
                     <span class="bg-[#8636CC] text-white text-[30px] font-bold px-4 py-2 rounded-md">
                         01
                     </span>
-                    <h3 class="text-[#350063] text-2xl font-black uppercase tracking-tight">Discovery</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <h3 class="font-thunder-medium text-[#350063] text-2xl uppercase mb-4">Discovery</h3>
+                    <p class="font-inter-display text-gray-500 text-sm leading-relaxed">
                         Understanding your brand, goals, target audience, and project requirements through detailed
                         consultation.
                     </p>
@@ -362,8 +389,8 @@
                     <span class="bg-[#8636CC] text-white text-[30px] font-bold px-4 py-2 rounded-md">
                         02
                     </span>
-                    <h3 class="text-[#350063] text-2xl font-black uppercase mb-4 tracking-tight">Ideation</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <h3 class="font-thunder-medium text-[#350063] text-2xl uppercase mb-4">Ideation</h3>
+                    <p class="font-inter-display text-gray-500 text-sm leading-relaxed">
                         Brainstorming creative concepts, mood boards, and initial sketches to explore different visual
                         directions.
                     </p>
@@ -374,8 +401,8 @@
                     <span class="bg-[#8636CC] text-white text-[30px] font-bold px-4 py-2 rounded-md">
                         03
                     </span>
-                    <h3 class="text-[#350063] text-2xl font-black uppercase mb-4 tracking-tight">Design</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <h3 class="font-thunder-medium text-[#350063] text-2xl uppercase mb-4">Design</h3>
+                    <p class="font-inter-display text-gray-500 text-sm leading-relaxed">
                         Creating high-fidelity designs with attention to detail, typography, color, and composition for
                         maximum impact.
                     </p>
@@ -386,8 +413,8 @@
                     <span class="bg-[#8636CC] text-white text-[30px] font-bold px-4 py-2 rounded-md">
                         04
                     </span>
-                    <h3 class="text-[#350063] text-2xl font-black uppercase mb-4 tracking-tight">Delivery</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <h3 class="font-thunder-medium text-[#350063] text-2xl uppercase mb-4">Delivery</h3>
+                    <p class="font-inter-display text-gray-500 text-sm leading-relaxed">
                         Final files preparation, documentation, and handoff with all necessary formats and guidelines
                         for implementation.
                     </p>
@@ -399,17 +426,18 @@
 
     <!-- Works Details -->
     <section class="overflow-hidden p-4 md:p-8 lg:p-12">
-        <div class="bg-[#8636CC] rounded-3xl overflow-hidden relative">
-            <div class="container mx-auto px-6 md:px-12 lg:px-16">
+        <div class="bg-[#8636CC] rounded-2xl overflow-hidden relative">
+            <div class="container mx-auto px-4 md:px-12 lg:px-16">
                 <div class="grid grid-cols-12 items-center">
 
                     <div class="col-span-12 lg:col-span-7 z-10 pt-12 md:pt-20 lg:pt-24 pb-0 lg:pb-24">
                         <h2
-                            class="text-white text-[35px] md:text-[60px] lg:text-[72px] font-black leading-[1.1] uppercase mb-6">
+                            class="font-thunder-bold text-white text-[35px] md:text-[60px] lg:text-[100px] leading-[1.1] uppercase mb-6">
                             My Professional Tools <br class="hidden md:block"> & Workflow Process
                         </h2>
 
-                        <p class="text-white/80 text-sm md:text-base max-w-md mb-8 lg:mb-12 leading-relaxed">
+                        <p
+                            class="font-inter-display text-white/80 text-sm md:text-base max-w-md mb-8 lg:mb-12 leading-relaxed">
                             Industry-leading software and platforms to deliver professional-grade design work with
                             precision and efficiency.
                         </p>
@@ -424,39 +452,51 @@
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6 pb-12 lg:pb-0">
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-5 md:gap-x-6 pb-12 lg:pb-0">
                             <div class="space-y-1">
                                 <div class="flex items-center gap-2">
-                                    <img src="assets/images/workflow1.svg" alt="icon" class="w-5 h-5">
+                                    <img src="assets/images/workflow1.svg" alt="icon"
+                                        class="w-4 h-4 md:w-6 md:h-6 object-contain text-white">
+
                                     <span
-                                        class="text-white font-bold uppercase tracking-wider text-base md:text-lg">Photoshop</span>
+                                        class="font-thunder-semi-bold text-white uppercase text-[24px] md:text-[36px] leading-tight">
+                                        Photoshop
+                                    </span>
                                 </div>
-                                <p class="text-white/60 text-xs md:text-sm ml-7">Image Editing</p>
+                                <p class="text-white/60 text-[10px] md:text-xs ml-6 md:ml-8">
+                                    Image Editing
+                                </p>
                             </div>
 
                             <div class="space-y-1">
                                 <div class="flex items-center gap-2">
-                                    <img src="assets/images/workflow1.svg" alt="icon" class="w-5 h-5">
+                                    <img src="assets/images/workflow1.svg" alt="icon"
+                                        class="w-4 h-4 md:w-6 md:h-6 object-contain text-white">
+
                                     <span
-                                        class="text-white font-bold uppercase tracking-wider text-base md:text-lg">Illustrator</span>
+                                        class="font-thunder-semi-bold text-white font-bold uppercase text-[24px] md:text-[36px]">Illustrator</span>
                                 </div>
                                 <p class="text-white/60 text-xs md:text-sm ml-7">Vector Graphics</p>
                             </div>
 
                             <div class="space-y-1">
                                 <div class="flex items-center gap-2">
-                                    <img src="assets/images/workflow1.svg" alt="icon" class="w-5 h-5">
+                                    <img src="assets/images/workflow1.svg" alt="icon"
+                                        class="w-4 h-4 md:w-6 md:h-6 object-contain text-white">
+
                                     <span
-                                        class="text-white font-bold uppercase tracking-wider text-base md:text-lg">Capcut</span>
+                                        class="font-thunder-semi-bold text-white font-bold uppercase text-[24px] md:text-[36px]">Capcut</span>
                                 </div>
                                 <p class="text-white/60 text-xs md:text-sm ml-7">Social Video</p>
                             </div>
 
                             <div class="space-y-1">
                                 <div class="flex items-center gap-2">
-                                    <img src="assets/images/workflow1.svg" alt="icon" class="w-5 h-5">
+                                    <img src="assets/images/workflow1.svg" alt="icon"
+                                        class="w-4 h-4 md:w-6 md:h-6 object-contain text-white">
+
                                     <span
-                                        class="text-white font-bold uppercase tracking-wider text-base md:text-lg">After
+                                        class="font-thunder-semi-bold text-white font-bold uppercase text-[24px] md:text-[36px]">After
                                         Effects</span>
                                 </div>
                                 <p class="text-white/60 text-xs md:text-sm ml-7">Motion Design</p>
@@ -464,9 +504,11 @@
 
                             <div class="space-y-1">
                                 <div class="flex items-center gap-2">
-                                    <img src="assets/images/workflow1.svg" alt="icon" class="w-5 h-5">
+                                    <img src="assets/images/workflow1.svg" alt="icon"
+                                        class="w-4 h-4 md:w-6 md:h-6 object-contain text-white">
+
                                     <span
-                                        class="text-white font-bold uppercase tracking-wider text-base md:text-lg">Premiere
+                                        class="font-thunder-semi-bold text-white font-bold uppercase text-[24px] md:text-[36px]">Premiere
                                         Pro</span>
                                 </div>
                                 <p class="text-white/60 text-xs md:text-sm ml-7">Video Editing</p>
@@ -474,21 +516,23 @@
 
                             <div class="space-y-1">
                                 <div class="flex items-center gap-2">
-                                    <img src="assets/images/workflow1.svg" alt="icon" class="w-5 h-5">
+                                    <img src="assets/images/workflow1.svg" alt="icon"
+                                        class="w-4 h-4 md:w-6 md:h-6 object-contain text-white">
+
                                     <span
-                                        class="text-white font-bold uppercase tracking-wider text-base md:text-lg">Canva</span>
+                                        class="font-thunder-semi-bold text-white font-bold uppercase text-[24px] md:text-[36px]">Canva</span>
                                 </div>
                                 <p class="text-white/60 text-xs md:text-sm ml-7">Vector Graphics</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="hidden lg:flex col-span-5 items-end justify-end self-end">
-                        <div class="relative w-[120%] -mr-20">
+                    <div class="hidden lg:flex col-span-12 md:col-span-5 items-end justify-end self-end mr-0 md:-mr-40">
+                        <div class="relative w-full">
                             <img src="assets/images/hero-profile.png" alt="Profile"
-                                class="w-full h-auto block object-contain align-bottom" />
+                                class="w-full object-contain align-bottom" />
                         </div>
-                        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#8636CC] to-transparent">
+                        <div class="hero-gradient absolute inset-0 pointer-events-none">
                         </div>
                     </div>
 
@@ -500,97 +544,242 @@
 
 
     <!-- Client Feedback & Reviews -->
-    <section class="bg-white py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-center text-[56px] md:text-[96px] font-black text-[#350063] uppercase tracking-tight mb-12">
+    <section id="feedback-slider" class="splide bg-white pt-8 md:pt-16 pb-10 md:pb-20" aria-label="Client Feedback">
+        <div class="container mx-auto">
+            <h2 class="font-thunder-bold text-center text-[56px] md:text-[96px] text-[#350063] uppercase pb-4 md:pb-12">
                 Client Feedback & Reviews
             </h2>
+        </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-10">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide px-2">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden bg-gray-200 aspect-[3/4]">
+                            <img src="assets/images/feedback-img1.png" alt="Client 1"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[92%] bg-white p-5 rounded-xl shadow-2xl border border-gray-50">
+                            <img src="assets/images/feedback-icon.svg" alt="Quote" class="w-8 mb-3">
+                            <p class="text-[14px] md:text-[18px] leading-[1.4] text-[#0F2C24] font-medium mx-">
+                                “Proin Eget Euismod Nisi. Vestibulum Pretium, Velit Tincidunt Congue Gravida, Erat
+                                Ligula Venenatis Velit, Ac Tempus Augue Ligula A Libero.”
+                            </p>
+                        </div>
+                    </div>
+                </li>
 
-                <div class="relative group">
-                    <div class="rounded-xl overflow-hidden aspect-[4/5] bg-gray-200">
-                        <img src="assets/images/feedback-img1.png" alt="Client 1" class="w-full h-full object-cover">
+                <li class="splide__slide px-2">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden bg-gray-200 aspect-[3/4]">
+                            <img src="assets/images/feedback-img2.png" alt="Client 2"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[92%] bg-white p-5 rounded-xl shadow-2xl border border-gray-50">
+                            <img src="assets/images/feedback-icon.svg" alt="Quote" class="w-8 mb-3">
+                            <p class="text-[14px] md:text-[18px] leading-[1.4] text-[#0F2C24] font-medium">
+                                “Mauris Ante Augue, Porta Sit Amet Ex At, Pellentesque Blandit Risus. Nam At Imperdiet
+                                Elit. Sed Aliquam, Lorem In Rhoncus Interdum, Ante Lectus Convallis.”
+                            </p>
+                        </div>
                     </div>
-                    <div
-                        class="absolute bottom-[-20px] left-1/2 -translate-x-1/2 w-[90%] bg-white p-4 rounded-lg shadow-xl border border-gray-100">
-                        <span class="text-[#8a2be2] text-3xl leading-none font-serif block mb-1">“</span>
-                        <p class="text-[11px] leading-relaxed text-gray-700 italic">
-                            "Proin Eget Euismod Nisi. Vestibulum Pretium, Velit Tincidunt Congue Gravida, Erat Ligula
-                            Venenatis Velit, Ac Tempus Augue Ligula A Libero."
-                        </p>
-                    </div>
-                </div>
+                </li>
 
-                <div class="relative group">
-                    <div class="rounded-xl overflow-hidden aspect-[4/5] bg-gray-200">
-                        <img src="assets/images/feedback-img2.png" alt="Client 2" class="w-full h-full object-cover">
+                <li class="splide__slide px-2">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden bg-gray-200 aspect-[3/4]">
+                            <img src="assets/images/feedback-img3.png" alt="Client 3"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[92%] bg-white p-5 rounded-xl shadow-2xl border border-gray-100">
+                            <img src="assets/images/feedback-icon.svg" alt="Quote" class="w-8 mb-3">
+                            <p class="text-[14px] md:text-[18px] leading-[1.4] text-[#0F2C24] font-medium">
+                                "Nullam Sed Leo A Augue Sodales Pharetra. In Pretium, Libero Id Auctor Euismod, Nulla
+                                Ligula Finibus Eros, Egestas Mattis Erat Metus Id Felis."
+                            </p>
+                        </div>
                     </div>
-                    <div
-                        class="absolute bottom-[-20px] left-1/2 -translate-x-1/2 w-[90%] bg-white p-4 rounded-lg shadow-xl border border-gray-100">
-                        <span class="text-[#8a2be2] text-3xl leading-none font-serif block mb-1">“</span>
-                        <p class="text-[11px] leading-relaxed text-gray-700 italic">
-                            "Mauris Ante Augue, Porta Sit Amet Ex At, Pellentesque Blandit Risus. Nam At Imperdiet Elit.
-                            Sed Aliquam, Lorem In Rhoncus Interdum, Ante Lectus Convallis."
-                        </p>
-                    </div>
-                </div>
+                </li>
 
-                <div class="relative group">
-                    <div class="rounded-xl overflow-hidden aspect-[4/5] bg-gray-200">
-                        <img src="assets/images/feedback-img3.png" alt="Client 3" class="w-full h-full object-cover">
+                <li class="splide__slide px-2">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden bg-gray-200 aspect-[3/4]">
+                            <img src="assets/images/feedback-img5.png" alt="Client 4"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[92%] bg-white p-5 rounded-xl shadow-2xl border border-gray-100">
+                            <img src="assets/images/feedback-icon.svg" alt="Quote" class="w-8 mb-3">
+                            <p class="text-[14px] md:text-[18px] leading-[1.4] text-[#0F2C24] font-medium">
+                                "Nullam Sed Leo A Augue Sodales Pharetra. In Pretium, Libero Id Auctor Euismod, Nulla
+                                Ligula Finibus Eros, Egestas Mattis Erat Metus Id Felis."
+                            </p>
+                        </div>
                     </div>
-                    <div
-                        class="absolute bottom-[-20px] left-1/2 -translate-x-1/2 w-[90%] bg-white p-4 rounded-lg shadow-xl border border-gray-100">
-                        <span class="text-[#8a2be2] text-3xl leading-none font-serif block mb-1">“</span>
-                        <p class="text-[11px] leading-relaxed text-gray-700 italic">
-                            "Nullam Sed Leo A Augue Sodales Pharetra. In Pretium, Libero Id Auctor Euismod, Nulla Ligula
-                            Finibus Eros, Egestas Mattis Erat Metus Id Felis."
-                        </p>
-                    </div>
-                </div>
+                </li>
 
-                <div class="relative group">
-                    <div class="rounded-xl overflow-hidden aspect-[4/5] bg-gray-200">
-                        <img src="assets/images/feedback-img4.png" alt="Client 4" class="w-full h-full object-cover">
+                <li class="splide__slide px-2">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden bg-gray-200 aspect-[3/4]">
+                            <img src="assets/images/feedback-img6.png" alt="Client 5"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[92%] bg-white p-5 rounded-xl shadow-2xl border border-gray-100">
+                            <img src="assets/images/feedback-icon.svg" alt="Quote" class="w-8 mb-3">
+                            <p class="text-[14px] md:text-[18px] leading-[1.4] text-[#0F2C24] font-medium">
+                                "Nullam Sed Leo A Augue Sodales Pharetra. In Pretium, Libero Id Auctor Euismod, Nulla
+                                Ligula Finibus Eros, Egestas Mattis Erat Metus Id Felis."
+                            </p>
+                        </div>
                     </div>
-                    <div
-                        class="absolute bottom-[-20px] left-1/2 -translate-x-1/2 w-[90%] bg-white p-4 rounded-lg shadow-xl border border-gray-100">
-                        <span class="text-[#8a2be2] text-3xl leading-none font-serif block mb-1">“</span>
-                        <p class="text-[11px] leading-relaxed text-gray-700 italic">
-                            "Nullam Sed Leo A Augue Sodales Pharetra. In Pretium, Libero Id Auctor Euismod, Nulla Ligula
-                            Finibus Eros, Egestas Mattis Erat Metus Id Felis."
-                        </p>
-                    </div>
-                </div>
-
-                <div class="relative group">
-                    <div class="rounded-xl overflow-hidden aspect-[4/5] bg-gray-200">
-                        <img src="assets/images/feedback-img5.png" alt="Client 5" class="w-full h-full object-cover">
-                    </div>
-                    <div
-                        class="absolute bottom-[-20px] left-1/2 -translate-x-1/2 w-[90%] bg-white p-4 rounded-lg shadow-xl border border-gray-100">
-                        <span class="text-[#8a2be2] text-3xl leading-none font-serif block mb-1">“</span>
-                        <p class="text-[11px] leading-relaxed text-gray-700 italic">
-                            "Nullam Sed Leo A Augue Sodales Pharetra. In Pretium, Libero Id Auctor Euismod, Nulla Ligula
-                            Finibus Eros, Egestas Mattis Erat Metus Id Felis."
-                        </p>
-                    </div>
-                </div>
-
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
 
 
 
+    <section class="bg-[#FCF8FF] py-10 md:py-37">
+        <div class="container mx-auto overflow-hidden">
+            <div class="grid grid-cols-12 gap-0 items-start">
+
+                <div class="col-span-12 lg:col-span-5 px-4 md:px-0 pb-10 lg:pb-0">
+                    <h2
+                        class="font-thunder-bold text-[#300067] text-[54px] lg:text-[84px] font-black leading-[0.9] uppercase">
+                        Still Have<br>Questions?
+                    </h2>
+                </div>
+
+                <div class="col-span-12 lg:col-span-7 space-y-3">
+
+                    <details class="group bg-white transition-all duration-200">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <span class="font-inter-display-semibold text-[#300067] text-[16px] md:text-[24px]">What is
+                                your typical project
+                                timeline?</span>
+                            <span class="text-[#300067] text-3xl font-light leading-none">+</span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-600 border-t border-gray-50 pt-4">
+                            Your answer here
+                        </div>
+                    </details>
+
+                    <details class="group bg-white transition-all duration-200">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <span class="font-inter-display-semibold text-[#300067] text-[16px] md:text-[24px]">How many
+                                revisions are included?</span>
+                            <span class="text-[#300067] text-3xl font-light leading-none">+</span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-600 border-t border-gray-50 pt-4">
+                            Your answer here
+                        </div>
+                    </details>
+
+                    <details class="group bg-white transition-all duration-200">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <span class="font-inter-display-semibold text-[#300067] text-[16px] md:text-[24px]">What
+                                file formats will I receive?</span>
+                            <span class="text-[#300067] text-3xl font-light leading-none">+</span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-600 border-t border-gray-50 pt-4">
+                            Your answer here
+                        </div>
+                    </details>
+
+                    <details class="group bg-white transition-all duration-200">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <span class="font-inter-display-semibold text-[#300067] text-[16px] md:text-[24px]">Do you
+                                work with international
+                                clients?</span>
+                            <span class="text-[#300067] text-3xl font-light leading-none">+</span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-600 border-t border-gray-50 pt-4">
+                            Your answer here
+                        </div>
+                    </details>
+
+                    <details class="group bg-white transition-all duration-200">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <span class="font-inter-display-semibold text-[#300067] text-[16px] md:text-[24px]">What are
+                                your payment terms?</span>
+                            <span class="text-[#300067] text-3xl font-light leading-none">+</span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-600 border-t border-gray-50 pt-4">
+                            Your answer here
+                        </div>
+                    </details>
+
+                    <details class="group bg-white transition-all duration-200">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <span class="font-inter-display-semibold text-[#300067] text-[16px] md:text-[24px]">Can you
+                                handle rush projects?</span>
+                            <span class="text-[#300067] text-3xl font-light leading-none">+</span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-600 border-t border-gray-50 pt-4">
+                            Your answer here
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
+    <footer class="bg-[#8636CC] text-white rounded-0 md:rounded-[10px] pb-6 md:pb-10 pt-8 md:pt-16 px-6 md:px-12">
+        <div class="container mx-auto flex flex-col items-center text-center">
 
+            <h2 class="font-thunder-bold text-[56px] md:text-[116px] leading-none uppercase mb-6">
+                Let's Work Together
+            </h2>
+
+            <p class="text-sm md:text-lg opacity-90 mb-8 font-light leading-relaxed">
+                Have a project in mind? I'm always open to discussing new opportunities and creative collaborations.
+            </p>
+
+            <button
+                class="font-inter-display-medium bg-white text-black font-bold py-4 px-10 rounded-full text-sm md:text-base hover:bg-opacity-90 transition-all mb-8 md:mb-16 uppercase">
+                Start Your Project
+            </button>
+
+            <div class="hidden md:block w-full h-[1px] bg-white opacity-20 mb-8 md:mb-12"></div>
+
+            <div class="grid grid-cols-3 gap-6 md:gap-12 w-full mb-16">
+                <div>
+                    <div class="font-thunder-bold text-5xl md:text-6xl font-bold mb-2">
+                        <span class="counter" data-target="24">0</span>h
+                    </div>
+                    <p class="text-xs md:text-sm opacity-80">Average Response Time</p>
+                </div>
+                <div>
+                    <div class="font-thunder-bold text-5xl md:text-6xl font-bold mb-2">
+                        <span class="counter" data-target="100">0</span>%
+                    </div>
+                    <p class="text-xs md:text-sm opacity-80">Project Success Rate</p>
+                </div>
+                <div>
+                    <div class="font-thunder-bold text-5xl md:text-6xl font-bold mb-2">
+                        <span class="counter" data-target="50">0</span>+
+                    </div>
+                    <p class="text-xs md:text-sm opacity-80">5-Star Reviews</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="hidden md:block w-full h-[1px] bg-white opacity-20 mb-4 md:mb-6"></div>
+        <div class="text-center md:text-[16px] text-[#FFFFFF]">
+            © 2026 Rafiqul Islam. All rights reserved.
+        </div>
+    </footer>
 
     <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>

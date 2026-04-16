@@ -45,3 +45,70 @@ function playVideo() {
             </div>
         `;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    var splide = new Splide("#feedback-slider", {
+        type: "loop",
+        drag: "free",
+        focus: "center",
+        perPage: 5,
+        gap: "30px",
+        autoplay: true,
+        interval: 1000,
+        pauseOnHover: false,
+        arrows: false,
+        pagination: true,
+        breakpoints: {
+            1024: {
+                perPage: 5,
+            },
+            768: {
+                perPage: 1,
+                padding: "10%",
+            },
+        },
+    });
+
+    splide.mount();
+});
+
+// counter animation
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+
+    if (counters.length > 0) {
+        const speed = 100;
+
+        const startCounter = (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute("data-target");
+
+                    const updateCount = () => {
+                        const count = +counter.innerText;
+                        // Calculate increment based on target to keep speeds consistent
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+
+                    updateCount();
+                    // Stop observing once the animation has run
+                    observer.unobserve(counter);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(startCounter, {
+            threshold: 0.5, // Trigger when 50% of the element is visible
+        });
+
+        counters.forEach((counter) => observer.observe(counter));
+    }
+});
