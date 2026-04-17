@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         perPage: 5,
         gap: "30px",
         autoplay: true,
-        interval: 1000,
+        interval: 4000,
         pauseOnHover: false,
         arrows: false,
         pagination: true,
@@ -122,17 +122,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 e.preventDefault();
 
                 filterButtons.forEach((btn) => {
-                    btn.classList.remove("active", "bg-[#8636CC]", "text-white");
+                    btn.classList.remove(
+                        "active",
+                        "bg-[#8636CC]",
+                        "text-white",
+                    );
                     btn.classList.add("bg-[#F3F4F4]", "text-[#303030]");
                 });
 
                 button.classList.add("active", "bg-[#8636CC]", "text-white");
                 button.classList.remove("bg-[#F3F4F4]", "text-[#303030]");
 
-                const filterValue = button.getAttribute("data-filter").toLowerCase();
+                const filterValue = button
+                    .getAttribute("data-filter")
+                    .toLowerCase();
 
                 projectItems.forEach((item) => {
-                    const category = item.getAttribute("data-category").toLowerCase();
+                    const category = item
+                        .getAttribute("data-category")
+                        .toLowerCase();
 
                     if (filterValue === "all" || category === filterValue) {
                         item.style.display = "block";
@@ -144,8 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             {
                                 duration: 300,
                                 easing: "ease-out",
-                                fill: "forwards"
-                            }
+                                fill: "forwards",
+                            },
                         );
                     } else {
                         item.style.display = "none";
@@ -155,4 +163,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
