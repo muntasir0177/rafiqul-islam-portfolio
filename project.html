@@ -6,70 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shorif Ahammed</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="assets/css/splide.min.css">
 </head>
 
 <body>
 
 
-    <nav id="navbar"
-        class="fixed top-0 left-0 right-0 z-50 flex items-center flex items-center justify-between px-0 md:px-45 py-4 bg-[#8636CC]">
-        <div class="container mx-auto px-6 md:px-0 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 shrink-0 group">
-                <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20">
-                    <img src="assets/images/nav-img.png" alt="Rafiqul Islam" class="w-full h-full object-cover" />
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="brand-img-wrapper">
+                    <img src="assets/images/nav-img.png" alt="Rafiqul Islam" class="brand-img" />
                 </div>
-                <span class="text-[18px] font-semibold text-white font-['Inter_Display',sans-serif]">
-                    Rafiqul Islam
-                </span>
+                <span class="brand-name">Rafiqul Islam</span>
             </a>
 
-            <div class="flex items-center gap-10">
-                <ul class="hidden md:flex items-center gap-10 list-none">
-                    <li>
-                        <a href="work.html"
-                            class="text-[14px] font-medium text-white/90 hover:text-white uppercase tracking-widest font-['Inter_Display',sans-serif] transition-all">
-                            Work
-                        </a>
-                    </li>
-                    <li>
-                        <a href="about.html"
-                            class="text-[14px] font-medium text-white/90 hover:text-white uppercase tracking-widest font-['Inter_Display',sans-serif] transition-all">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="text-[14px] font-medium text-white/90 hover:text-white uppercase tracking-widest font-['Inter_Display',sans-serif] transition-all">
-                            Download CV
-                        </a>
-                    </li>
+            <div class="nav-actions">
+                <ul class="desktop-menu">
+                    <li><a href="project.html" class="nav-link">Work</a></li>
+                    <li><a href="#" class="nav-link">About</a></li>
+                    <li><a href="#" class="nav-link">Download CV</a></li>
                 </ul>
 
-                <button id="hamburger"
-                    class="md:hidden flex flex-col justify-center items-center gap-[5px] w-8 h-8 focus:outline-none">
-                    <span id="ham1" class="block w-6 h-[2px] bg-white transition-all duration-300"></span>
-                    <span id="ham2" class="block w-6 h-[2px] bg-white transition-all duration-300"></span>
-                    <span id="ham3" class="block w-4 h-[2px] bg-white transition-all duration-300 ml-auto"></span>
+                <button id="hamburger" class="hamburger">
+                    <span id="ham1" class="ham-line"></span>
+                    <span id="ham2" class="ham-line"></span>
+                    <span id="ham3" class="ham-line ham-short"></span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <div id="mobile-menu"
-        class="hidden flex-col gap-6 p-8 bg-[#8636CC] md:hidden z-40 fixed top-[72px] left-0 right-0 h-screen">
-        <a href="work.html"
-            class="text-white uppercase tracking-widest text-lg font-medium border-b border-white/10 pb-4">Work</a>
-        <a href="about.html"
-            class="text-white uppercase tracking-widest text-lg font-medium border-b border-white/10 pb-4">About</a>
-        <a href="#" class="text-white uppercase tracking-widest text-lg font-medium">Download CV</a>
+    <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="project.html" class="mobile-link border-bottom">Work</a>
+        <a href="#" class="mobile-link border-bottom">About</a>
+        <a href="#" class="mobile-link">Download CV</a>
     </div>
 
-
+    <!-- Portfolio Section -->
     <section class="bg-[#8636CC] flex items-center overflow-hidden pt-20 md:pt-[120px] pb-6 md:pb-[110px] px-4 md:px-0">
         <div class="container mx-auto flex flex-col justify-center">
             <h1 class="font-thunder-bold text-[100px] text-white uppercase leading-[0.8] pb-4">
@@ -85,176 +59,354 @@
 
     </section>
 
-    <section class="py-4 md:py-6 px-2 md:px-0">
-        <div class="container mx-auto">
-            <div class="flex justify-left w-full">
-                <div
-                    class="flex items-center gap-4 overflow-x-auto pb-4 whitespace-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+    <!-- projects -->
+    <section class="bg-white md:py-0 lg:py-0 lg:mb-0 px-4 md:px-0">
+        <div class="container mx-auto pt-6 md:pt-8">
 
-                    <a href="#" data-filter="all"
-                        class="filter-btn active px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-medium rounded-full text-white bg-[#8636CC]">All</a>
+            <div class="pt-0 md:pt-5">
+                <div class="flex justify-start w-full">
+                    <div class="flex items-center gap-4 overflow-x-auto pb-4 scrollbar-hide whitespace-nowrap">
+                        <a href="#" data-filter="all"
+                            class="filter-btn active px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-medium rounded-full text-white bg-[#8636CC]">All</a>
 
-                    <a href="#" data-filter="Brand Identity"
-                        class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white border border-transparent transition-all">Brand
-                        Identity</a>
+                        <a href="#" data-filter="Brand Identity"
+                            class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-inter-display-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white border border-transparent">Brand
+                            Identity</a>
 
-                    <a href="#" data-filter="Logo Design"
-                        class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Logo
-                        Design</a>
+                        <a href="#" data-filter="Logo Design"
+                            class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-inter-display-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Logo
+                            Design</a>
 
-                    <a href="#" data-filter="Social Media"
-                        class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Social
-                        Media Apps</a>
+                        <a href="#" data-filter="Social Media"
+                            class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-inter-display-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Social
+                            Media</a>
 
-                    <a href="#" data-filter="Packaging"
-                        class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Packaging</a>
+                        <a href="#" data-filter="Packaging"
+                            class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-inter-display-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Packaging</a>
 
-                    <a href="#" data-filter="Motion Graphics"
-                        class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Motion
-                        Graphics</a>
+                        <a href="#" data-filter="Motion Graphics"
+                            class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-inter-display-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Motion
+                            Graphics</a>
 
-                    <a href="#" data-filter="Explainer Videos"
-                        class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Explainer
-                        Videos</a>
+                        <a href="#" data-filter="Explainer Videos"
+                            class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-inter-display-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Explainer
+                            Videos</a>
 
-                    <a href="#" data-filter="Presentation"
-                        class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Presentation</a>
+                        <a href="#" data-filter="Presentation"
+                            class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-inter-display-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Presentation</a>
 
-                    <a href="#" data-filter="Print"
-                        class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Print</a>
+                        <a href="#" data-filter="Print"
+                            class="filter-btn px-3 md:px-5 py-1.5 md:py-2.5 text-[12px] md:text-[15px] font-inter-display-medium rounded-full text-[#303030] bg-[#F3F4F4] hover:bg-[#8636CC] hover:text-white transition-all border border-transparent">Print</a>
+                    </div>
                 </div>
             </div>
+
+
+            <div class="w-full py-[50px] md:py-[86px] border border-white/5">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <a href="project-details.html" data-category="brand identity"
+                        class="project-item group cursor-pointer max-w-[840px] overflow-hidden">
+                        <div class="rounded-xl overflow-hidden mb-4">
+                            <img src="assets/images/featured-image1.webp" alt="Social Media Campaign"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]">
+                        </div>
+                        <h2 class="text-[24px] md:text-[40px] font-thunder-medium uppercase">Hello Mello – Social
+                            Media Campaign
+                        </h2>
+                    </a>
+
+                    <a href="project-details.html" data-category="social media"
+                        class="project-item group cursor-pointer max-w-[840px] overflow-hidden">
+                        <div class="rounded-xl overflow-hidden mb-4">
+                            <img src="assets/images/featured-image2.webp" alt="NEXUS PLATFORM"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]">
+                        </div>
+                        <h2 class="text-[24px] md:text-[40px] font-thunder-medium uppercase">NEXUS PLATFORM</h2>
+                    </a>
+
+                    <a href="project-details.html" data-category="logo design"
+                        class="project-item group cursor-pointer max-w-[840px] overflow-hidden">
+                        <div class="rounded-xl overflow-hidden mb-4">
+                            <img src="assets/images/featured-image3.webp" alt="Cream Tube Label Design"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]">
+                        </div>
+                        <h2 class="text-[24px] md:text-[40px] font-thunder-medium uppercase">Cream Tube Label Design
+                        </h2>
+                    </a>
+
+                    <a href="project-details.html" data-category="packaging"
+                        class="project-item group cursor-pointer w-full md:max-w-[840px] overflow-hidden">
+                        <div class="rounded-xl overflow-hidden mb-4">
+                            <img src="assets/images/featured-image4.webp" alt="Premium Craft Beer Can Label Design"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]">
+                        </div>
+                        <h2 class="text-[24px] md:text-[40px] font-thunder-medium uppercase">Premium Craft Beer
+                            Can Label Design</h2>
+                    </a>
+                    <a href="project-details.html" data-category="packaging"
+                        class="project-item group cursor-pointer w-full md:max-w-[840px] overflow-hidden">
+                        <div class="rounded-xl overflow-hidden mb-4">
+                            <img src="assets/images/featured-image5.webp" alt="Cream Tube Label Design"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]">
+                        </div>
+                        <h2 class="text-[24px] md:text-[40px] font-thunder-medium uppercase">Cream Tube Label Design
+                        </h2>
+                    </a>
+                    <a href="project-details.html" data-category="packaging"
+                        class="project-item group cursor-pointer w-full md:max-w-[840px] overflow-hidden">
+                        <div class="rounded-xl overflow-hidden mb-4">
+                            <img src="assets/images/featured-image6.webp" alt="Premium Craft Beer Can Label Design"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]">
+                        </div>
+                        <h2 class="text-[24px] md:text-[40px] font-thunder-medium uppercase">Premium Craft Beer Can
+                            Label Design</h2>
+                    </a>
+                    <a href="project-details.html" data-category="packaging"
+                        class="project-item group cursor-pointer w-full md:max-w-[840px] overflow-hidden">
+                        <div class="rounded-xl overflow-hidden mb-4">
+                            <img src="assets/images/featured-image7.webp" alt="Orange Juice Pouch Packaging Design"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]">
+                        </div>
+                        <h2 class="text-[24px] md:text-[40px] font-thunder-medium uppercase">Orange Juice Pouch
+                            Packaging Design</h2>
+                    </a>
+                    <a href="project-details.html" data-category="packaging"
+                        class="project-item group cursor-pointer w-full md:max-w-[840px] overflow-hidden">
+                        <div class="rounded-xl overflow-hidden mb-4">
+                            <img src="assets/images/featured-image8.webp" alt="Premium Craft Beer Can Label Design"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]">
+                        </div>
+                        <h2 class="text-[24px] md:text-[40px] font-thunder-medium uppercase">Premium Craft Beer
+                            Can Label Design</h2>
+                    </a>
+                    <a href="project-details.html" data-category="packaging"
+                        class="project-item group cursor-pointer w-full md:max-w-[840px] overflow-hidden">
+                        <div class="rounded-xl overflow-hidden mb-4">
+                            <img src="assets/images/featured-image9.webp" alt="Cream Tube Label Design"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]">
+                        </div>
+                        <h2 class="text-[24px] md:text-[40px] font-thunder-medium uppercase">Cream Tube Label Design
+                        </h2>
+                    </a>
+                    <a href="project-details.html" data-category="packaging"
+                        class="project-item group cursor-pointer w-full md:max-w-[840px] overflow-hidden">
+                        <div class="rounded-xl overflow-hidden mb-4">
+                            <img src="assets/images/featured-image10.webp" alt="Makita GV010 5-Inch Disc Sander"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]">
+                        </div>
+                        <h2 class="text-[24px] md:text-[40px] font-thunder-medium uppercase">Makita GV010 5-Inch Disc
+                            Sander</h2>
+                    </a>
+                </div>
+            </div>
+
+
         </div>
     </section>
-    <div class="w-full h-[1px] bg-[#EAEAEA] opacity-20 mb-2 md:mb-6"></div>
 
-    <!-- Featured Work -->
-    <section class="bg-[#FCF8FF] py-6 md:py-20 px-4 md:px-6">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                <a href="#" class="group block bg-white rounded-2xl">
-                    <div class="bg-white overflow-hidden shadow-sm">
-                        <img src="assets/images/featured-image1.png" alt="Hello Mello"
-                            class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
+    <!-- number count -->
+    <section class="w-full p-8 bg-[#8636CC] overflow-hidden">
+        <div class="container mx-auto py-[30px] md:py-[98px]">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6 text-white">
+
+                <div class="flex flex-col items-start md:items-center">
+                    <div class="flex items-baseline">
+                        <h2 class="counter text-[36px] md:text-[96px] font-thunder-bold leading-none" data-target="150">
+                            0</h2>
+                        <span class="text-[36px] md:text-[96px] font-thunder-bold leading-none">+</span>
                     </div>
-                    <h3
-                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
-                        Hello Mello — Social Media Campaign
-                    </h3>
-                </a>
+                    <p class="text-[14px] md:text-[20px] font-medium opacity-90">Projects Completed</p>
+                </div>
 
-                <a href="#" class="group block bg-white rounded-2xl">
-                    <div class="bg-white overflow-hidden shadow-sm">
-                        <img src="assets/images/featured-image2.png" alt="Nexus Platform"
-                            class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="flex flex-col items-start md:items-center">
+                    <div class="flex items-baseline">
+                        <h2 class="counter text-[36px] md:text-[96px] font-thunder-bold leading-none" data-target="150">
+                            0</h2>
+                        <span class="text-[36px] md:text-[96px] font-thunder-bold leading-none">+</span>
                     </div>
-                    <h3
-                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
-                        Nexus Platform
-                    </h3>
-                </a>
+                    <p class="text-[14px] md:text-[20px] font-medium opacity-90">Happy Clients</p>
+                </div>
 
-                <a href="#" class="group block bg-white rounded-2xl">
-                    <div class="bg-white overflow-hidden shadow-sm">
-                        <img src="assets/images/featured-image3.png" alt="Cream Tube"
-                            class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="flex flex-col items-start md:items-center">
+                    <div class="flex items-baseline">
+                        <h2 class="counter text-[36px] md:text-[96px] font-thunder-bold leading-none" data-target="150">
+                            0
+                        </h2>
+                        <span class="text-[36px] md:text-[96px] font-thunder-bold leading-none">+</span>
                     </div>
-                    <h3
-                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
-                        Cream Tube Label Design
-                    </h3>
-                </a>
+                    <p class="text-[14px] md:text-[20px] font-medium opacity-90">Awards Won</p>
+                </div>
 
-                <a href="#" class="group block bg-white rounded-2xl">
-                    <div class="bg-white overflow-hidden shadow-sm">
-                        <img src="assets/images/featured-image4.png" alt="Beer Can"
-                            class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="flex flex-col items-start md:items-center">
+                    <div class="flex items-baseline">
+                        <h2 class="counter text-[36px] md:text-[96px] font-thunder-bold leading-none" data-target="50">0
+                        </h2>
+                        <span class="text-[36px] md:text-[96px] font-thunder-bold leading-none">+</span>
                     </div>
-                    <h3
-                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
-                        Premium Craft Beer Can Label Design
-                    </h3>
-                </a>
-
-                <a href="#" class="group block bg-white rounded-2xl">
-                    <div class="bg-white overflow-hidden shadow-sm">
-                        <img src="assets/images/featured-image5.png" alt="Beer Can"
-                            class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
-                    </div>
-                    <h3
-                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
-                        Cream Tube Label Design
-                    </h3>
-                </a>
-
-                <a href="#" class="group block bg-white rounded-2xl">
-                    <div class="bg-white overflow-hidden shadow-sm">
-                        <img src="assets/images/featured-image6.png" alt="Beer Can"
-                            class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
-                    </div>
-                    <h3
-                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
-                        Premium Craft Beer Can Label Design
-                    </h3>
-                </a>
-
-                <a href="#" class="group block bg-white rounded-2xl">
-                    <div class="bg-white overflow-hidden shadow-sm">
-                        <img src="assets/images/featured-image7.png" alt="Beer Can"
-                            class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
-                    </div>
-                    <h3
-                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
-                        Orange Juice Pouch Packaging Design
-                    </h3>
-                </a>
-
-                <a href="#" class="group block bg-white rounded-2xl">
-                    <div class="bg-white overflow-hidden shadow-sm">
-                        <img src="assets/images/featured-image8.png" alt="Beer Can"
-                            class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
-                    </div>
-                    <h3
-                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
-                        Premium Craft Beer Can Label Design
-                    </h3>
-                </a>
-
-                <a href="#" class="group block bg-white rounded-2xl">
-                    <div class="bg-white overflow-hidden shadow-sm">
-                        <img src="assets/images/featured-image9.png" alt="Beer Can"
-                            class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
-                    </div>
-                    <h3
-                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
-                        Cream Tube Label Design
-                    </h3>
-                </a>
-
-                <a href="#" class="group block bg-white rounded-2xl">
-                    <div class="bg-white overflow-hidden shadow-sm">
-                        <img src="assets/images/featured-image10.png" alt="Beer Can"
-                            class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105">
-                    </div>
-                    <h3
-                        class="font-thunder-medium text-[#1A1A1A] text-[18px] md:text-[32px] uppercase px-[24px] py-[32px]">
-                        Makita GV010 5-Inch Disc Sander
-                    </h3>
-                </a>
+                    <p class="text-[14px] md:text-[20px] font-medium opacity-90">Years of Experience</p>
+                </div>
 
             </div>
         </div>
     </section>
 
 
+    <!-- Featured Projects -->
+    <section class="px-4 py-8 md:py-16">
+        <div class="container mx-auto">
+            <div class="mb-8 md:mb-10">
+                <h2 class="text-[46px] md:text-[96px] font-thunder-bold text-[#3b0764] uppercase sm:leading-tight">
+                    Featured Projects
+                </h2>
+                <p class="text-gray-600 max-w-sm text-sm leading-relaxed">
+                    Hand-picked selection of my most impactful work across different design disciplines.
+                </p>
+            </div>
+
+            <div class="space-y-20">
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-y-12 items-center">
+                    <div class="md:col-span-7">
+                        <div class="rounded-2xl flex items-center justify-center overflow-hidden">
+                            <img src="assets/images/featured-image3.webp" alt="Velocity Sports Brand"
+                                class="w-full aspect-[840/500] object-cover" />
+                        </div>
+                    </div>
+                    <div class="md:col-span-5 pl-0 md:pl-8">
+                        <h3 class="font-thunder-semi-bold text-[32px] md:text-[48px] uppercase pb-4 text-[#404040]">
+                            Velocity Sports Brand
+                        </h3>
+                        <p class=" text-[#404040] text-[18px] pb-6 leading-relaxed">
+                            Complete brand identity system for an emerging athletic wear company, including logo design,
+                            brand guidelines, packaging, and digital assets. The project focused on creating a dynamic,
+                            energetic visual language that resonates with active lifestyle enthusiasts.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">Logo
+                                Design</span>
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">Brand
+                                Design</span>
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">2026</span>
+                        </div>
+                        <a href="#"
+                            class="inline-flex items-center text-[18px] border-b border-black pb-1 hover:text-gray-600 transition-colors">
+                            View Project <span class="ml-2">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-y-12 items-center">
+                    <div class="md:col-span-5 md:pr-8 order-2 md:order-1">
+                        <h3 class="text-[32px] md:text-[48px] font-thunder-semi-bold uppercase pb-4 text-[#404040]">
+                            Bluechip Yacht Sales — Modern Logo
+                        </h3>
+                        <p class="text-[#404040] text-[18px] pb-6 leading-relaxed">
+                            Complete brand identity system for an emerging athletic wear company, including logo design,
+                            brand guidelines, packaging, and digital assets. The project focused on creating a dynamic,
+                            energetic visual language that resonates with active lifestyle enthusiasts.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">Logo
+                                Design</span>
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">Brand
+                                Design</span>
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">2026</span>
+                        </div>
+                        <a href="#"
+                            class="inline-flex items-center text-[18px] border-b border-black pb-1 hover:text-gray-600 transition-colors">
+                            View Project <span class="ml-2">→</span>
+                        </a>
+                    </div>
+                    <div class="md:col-span-7 order-1 md:order-2">
+                        <div class="rounded-2xl flex items-center justify-center overflow-hidden">
+                            <img src="assets/images/featured-image11.webp" alt="Bluechip Yacht Sales — Modern Logo"
+                                class="w-full aspect-[840/500] object-cover" />
+                        </div>
+                    </div>
+                </div>
 
 
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-y-12 items-center">
+                    <div class="md:col-span-7">
+                        <div class="rounded-2xl flex items-center justify-center overflow-hidden">
+                            <img src="assets/images/featured-image12.webp" alt="Velocity Sports Brand"
+                                class="w-full aspect-[840/500] object-cover" />
+                        </div>
+                    </div>
+                    <div class="md:col-span-5 md:pl-8">
+                        <h3 class="font-thunder-semi-bold text-[32px] md:text-[48px] uppercase pb-4 text-[#404040]">
+                            Book Cover – Roots and Resilience
+                        </h3>
+                        <p class=" text-[#404040] text-[18px] pb-6 leading-relaxed">
+                            Complete brand identity system for an emerging athletic wear company, including logo design,
+                            brand guidelines, packaging, and digital assets. The project focused on creating a dynamic,
+                            energetic visual language that resonates with active lifestyle enthusiasts.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">Logo
+                                Design</span>
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">Brand
+                                Design</span>
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">2026</span>
+                        </div>
+                        <a href="#"
+                            class="inline-flex items-center text-[18px] border-b border-black pb-1 hover:text-gray-600 transition-colors">
+                            View Project <span class="ml-2">→</span>
+                        </a>
+                    </div>
+                </div>
 
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-y-12 items-center">
+                    <div class="md:col-span-5 md:pr-8 order-2 md:order-1">
+                        <h3 class="text-[32px] md:text-[48px] font-thunder-semi-bold uppercase pb-4 text-[#404040]">
+                            Furniture Catalog Design
+                        </h3>
+                        <p class="text-[#404040] text-[18px] pb-6 leading-relaxed">
+                            Complete brand identity system for an emerging athletic wear company, including logo design,
+                            brand guidelines, packaging, and digital assets. The project focused on creating a dynamic,
+                            energetic visual language that resonates with active lifestyle enthusiasts.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">Logo
+                                Design</span>
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">Brand
+                                Design</span>
+                            <span
+                                class="px-4 py-2 border border-gray-200 rounded-lg text-[14px] md:text-[20px] text-[#404040]">2026</span>
+                        </div>
+                        <a href="#"
+                            class="inline-flex items-center text-[18px] border-b border-black pb-1 hover:text-gray-600 transition-colors">
+                            View Project <span class="ml-2">→</span>
+                        </a>
+                    </div>
+                    <div class="md:col-span-7 order-1 md:order-2">
+                        <div class="rounded-2xl flex items-center justify-center overflow-hidden">
+                            <img src="assets/images/featured-image13.webp" alt="Bluechip Yacht Sales — Modern Logo"
+                                class="w-full aspect-[840/500] object-cover" />
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </section>
 
     <!-- Client Feedback & Reviews -->
-    <section id="feedback-slider" class="splide bg-white pt-8 md:pt-16 pb-10 md:pb-20" aria-label="Client Feedback">
+    <section id="feedback-slider" class="splide bg-[#FCF8FF] pt-8 md:pt-16 pb-10 md:pb-20 mb-16"
+        aria-label="Client Feedback">
         <div class="container mx-auto">
             <h2 class="font-thunder-bold text-center text-[56px] md:text-[96px] text-[#350063] uppercase pb-4 md:pb-12">
                 Client Feedback & Reviews
@@ -266,7 +418,7 @@
                 <li class="splide__slide px-2">
                     <div class="relative">
                         <div class="rounded-2xl overflow-hidden bg-gray-200 aspect-[3/4]">
-                            <img src="assets/images/feedback-img1.png" alt="Client 1"
+                            <img src="assets/images/feedback-img1.webp" alt="Client 1"
                                 class="w-full h-full object-cover">
                         </div>
                         <div
@@ -283,7 +435,7 @@
                 <li class="splide__slide px-2">
                     <div class="relative">
                         <div class="rounded-2xl overflow-hidden bg-gray-200 aspect-[3/4]">
-                            <img src="assets/images/feedback-img2.png" alt="Client 2"
+                            <img src="assets/images/feedback-img2.webp" alt="Client 2"
                                 class="w-full h-full object-cover">
                         </div>
                         <div
@@ -300,7 +452,7 @@
                 <li class="splide__slide px-2">
                     <div class="relative">
                         <div class="rounded-2xl overflow-hidden bg-gray-200 aspect-[3/4]">
-                            <img src="assets/images/feedback-img3.png" alt="Client 3"
+                            <img src="assets/images/feedback-img3.webp" alt="Client 3"
                                 class="w-full h-full object-cover">
                         </div>
                         <div
@@ -317,7 +469,7 @@
                 <li class="splide__slide px-2">
                     <div class="relative">
                         <div class="rounded-2xl overflow-hidden bg-gray-200 aspect-[3/4]">
-                            <img src="assets/images/feedback-img5.png" alt="Client 4"
+                            <img src="assets/images/feedback-img5.webp" alt="Client 4"
                                 class="w-full h-full object-cover">
                         </div>
                         <div
@@ -334,7 +486,7 @@
                 <li class="splide__slide px-2">
                     <div class="relative">
                         <div class="rounded-2xl overflow-hidden bg-gray-200 aspect-[3/4]">
-                            <img src="assets/images/feedback-img6.png" alt="Client 5"
+                            <img src="assets/images/feedback-img6.webp" alt="Client 5"
                                 class="w-full h-full object-cover">
                         </div>
                         <div
@@ -353,52 +505,51 @@
 
 
     <!-- footer -->
-    <footer class="bg-[#8636CC] text-white rounded-0 md:rounded-[10px] pb-6 md:pb-10 pt-8 md:pt-16 px-6 md:px-12">
-        <div class="container mx-auto flex flex-col items-center text-center">
-
-            <h2 class="font-thunder-bold text-[56px] md:text-[116px] leading-none uppercase mb-6">
+    <footer class="main-footer">
+        <div class="footer-container">
+            <h2 class="footer-title">
                 Let's Work Together
             </h2>
 
-            <p class="text-sm md:text-lg opacity-90 mb-8 font-light leading-relaxed">
+            <p class="footer-description">
                 Have a project in mind? I'm always open to discussing new opportunities and creative collaborations.
             </p>
 
-            <button
-                class="font-inter-display-medium bg-white text-black font-bold py-4 px-10 rounded-full text-sm md:text-base hover:bg-opacity-90 transition-all mb-8 md:mb-16 uppercase">
+            <button class="footer-cta">
                 Start Your Project
             </button>
 
-            <div class="hidden md:block w-full h-[1px] bg-white opacity-20 mb-8 md:mb-12"></div>
+            <div class="footer-divider-top"></div>
 
-            <div class="grid grid-cols-3 gap-6 md:gap-12 w-full mb-16">
-                <div>
-                    <div class="font-thunder-bold text-5xl md:text-6xl font-bold mb-2">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">
                         <span class="counter" data-target="24">0</span>h
                     </div>
-                    <p class="text-xs md:text-sm opacity-80">Average Response Time</p>
+                    <p class="stat-label">Average Response Time</p>
                 </div>
-                <div>
-                    <div class="font-thunder-bold text-5xl md:text-6xl font-bold mb-2">
+                <div class="stat-item">
+                    <div class="stat-number">
                         <span class="counter" data-target="100">0</span>%
                     </div>
-                    <p class="text-xs md:text-sm opacity-80">Project Success Rate</p>
+                    <p class="stat-label">Project Success Rate</p>
                 </div>
-                <div>
-                    <div class="font-thunder-bold text-5xl md:text-6xl font-bold mb-2">
+                <div class="stat-item">
+                    <div class="stat-number">
                         <span class="counter" data-target="50">0</span>+
                     </div>
-                    <p class="text-xs md:text-sm opacity-80">5-Star Reviews</p>
+                    <p class="stat-label">5-Star Reviews</p>
                 </div>
             </div>
-
         </div>
-        <div class="hidden md:block w-full h-[1px] bg-white opacity-20 mb-4 md:mb-6"></div>
-        <div class="text-center md:text-[16px] text-[#FFFFFF]">
+
+        <div class="footer-divider-bottom"></div>
+        <div class="footer-copyright">
             © 2026 Rafiqul Islam. All rights reserved.
         </div>
     </footer>
 
+    <script src="assets/js/splide.min.js"></script>
     <script src="assets/js/script.js"></script>
 
 </body>

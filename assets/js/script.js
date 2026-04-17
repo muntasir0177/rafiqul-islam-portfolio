@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     const updateCount = () => {
                         const count = +counter.innerText;
-                        // Calculate increment based on target to keep speeds consistent
                         const inc = target / speed;
 
                         if (count < target) {
@@ -99,16 +98,61 @@ document.addEventListener("DOMContentLoaded", () => {
                     };
 
                     updateCount();
-                    // Stop observing once the animation has run
                     observer.unobserve(counter);
                 }
             });
         };
 
         const observer = new IntersectionObserver(startCounter, {
-            threshold: 0.5, // Trigger when 50% of the element is visible
+            threshold: 0.5,
         });
 
         counters.forEach((counter) => observer.observe(counter));
     }
 });
+
+// Project filtering
+document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectItems = document.querySelectorAll(".project-item");
+
+    if (filterButtons.length > 0 && projectItems.length > 0) {
+        filterButtons.forEach((button) => {
+            button.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                filterButtons.forEach((btn) => {
+                    btn.classList.remove("active", "bg-[#8636CC]", "text-white");
+                    btn.classList.add("bg-[#F3F4F4]", "text-[#303030]");
+                });
+
+                button.classList.add("active", "bg-[#8636CC]", "text-white");
+                button.classList.remove("bg-[#F3F4F4]", "text-[#303030]");
+
+                const filterValue = button.getAttribute("data-filter").toLowerCase();
+
+                projectItems.forEach((item) => {
+                    const category = item.getAttribute("data-category").toLowerCase();
+
+                    if (filterValue === "all" || category === filterValue) {
+                        item.style.display = "block";
+                        item.animate(
+                            [
+                                { opacity: 0, transform: "scale(0.95)" },
+                                { opacity: 1, transform: "scale(1)" },
+                            ],
+                            {
+                                duration: 300,
+                                easing: "ease-out",
+                                fill: "forwards"
+                            }
+                        );
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+    }
+});
+
