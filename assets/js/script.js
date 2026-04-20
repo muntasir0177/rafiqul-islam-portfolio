@@ -111,6 +111,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// FAQ Accordion
+const details = document.querySelectorAll("#faq-container details");
+details.forEach((targetDetail) => {
+    targetDetail.addEventListener("click", () => {
+        details.forEach((detail) => {
+            if (detail !== targetDetail) {
+                detail.removeAttribute("open");
+            }
+        });
+    });
+});
+
 // Project filtering
 document.addEventListener("DOMContentLoaded", () => {
     const filterButtons = document.querySelectorAll(".filter-btn");
